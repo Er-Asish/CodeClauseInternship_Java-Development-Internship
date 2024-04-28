@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class ArithmeticOperations
+{
+    static int a, b;
+    public static void main(String[] args) 
+    {
+        input();
+        display();
+    }
+    static void input() 
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the values of a and b: ");
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+    }
+    static void display() 
+    {
+        int addition, subtraction, multiplication, division;
+        addition = a + b;
+        subtraction = a - b;
+        multiplication = a * b;
+        try 
+        {
+            division = a / b;
+            System.out.println("add=" + addition + " sub=" + subtraction + " mul=" + multiplication + " div=" + division);
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero is not allowed");
+        }
+    }
+}
